@@ -354,6 +354,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- Project Gallery Lightbox ---
+    // --- Portfolio Filter Controls ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryGrids = document.querySelectorAll('.gallery-grid');
+
+    if (filterBtns.length && galleryGrids.length) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Toggle active state
+                filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+
+                // Show/hide gallery sections based on data-category on the grid
+                galleryGrids.forEach(grid => {
+                    const category = grid.getAttribute('data-category') || '';
+                    const section = grid.closest('section');
+                    if (!section) return;
+
+                    if (filter === 'all' || category === filter) {
+                        section.style.display = '';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+
+                // Smoothly scroll to first visible gallery
+                const firstVisible = document.querySelector('.gallery-grid[data-category]:not([style*="display: none"])');
+                if (firstVisible) {
+                    const top = firstVisible.closest('section').offsetTop - 90;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    }
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
