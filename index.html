@@ -6,7 +6,7 @@
     <title>Jusan B. Singson | Portfolio & Resume</title>
     <meta name="description" content="Portfolio of Jusan B. Singson, an experienced IT Professional specializing in IT support, systems administration, website management, and network operations.">
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,11 +14,11 @@
     <header class="header" id="header">
         <div class="container">
             <a href="#hero" class="logo" id="nav-logo">
-                <span>JUSAN</span>SINGSON
+                <span class="logo-text"><span>JUSAN</span>SINGSON</span>
                 <span class="logo-dot"></span>
             </a>
             
-            <nav>
+            <nav role="navigation">
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -26,7 +26,6 @@
                     <li><a href="#tools" class="nav-link">Tools</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects & Education</a></li>
-                    <li><a href="#" class="nav-link">Porfolio</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -38,6 +37,7 @@
             </button>
         </div>
     </header>
+<main>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
@@ -335,10 +335,41 @@
                         Web Platform Tools
                     </h3>
                     <div class="tool-list">
-                        <span class="tool-badge"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>WordPress</span></span>
-                        <span class="tool-badge"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>cPanel</span></span>
-                        <span class="tool-badge"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>phpMyAdmin</span></span>
-                        <span class="tool-badge"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Elementor</span></span>
+                        <span class="tool-badge wp" style="color: #21759B;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+                                <path d="M7.5 8.5c1.2 3 1.8 4 4.5 4 1.4 0 2.6-.9 3.6-2.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.2 15c1.4-1 3.6-1 5 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>WordPress</span>
+                        </span>
+
+                        <span class="tool-badge cpanel" style="color: #F37021;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="6" rx="1"/>
+                                <rect x="3" y="13" width="18" height="6" rx="1"/>
+                                <path d="M7 8v8"/>
+                            </svg>
+                            <span>cPanel</span>
+                        </span>
+
+                        <span class="tool-badge phpmyadmin" style="color: #E54B15;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <ellipse cx="12" cy="8" rx="6" ry="2"/>
+                                <path d="M6 8v6c0 1.1 2.7 2 6 2s6-.9 6-2V8"/>
+                                <path d="M6 14v2c0 1.1 2.7 2 6 2s6-.9 6-2v-2"/>
+                            </svg>
+                            <span>phpMyAdmin</span>
+                        </span>
+
+                        <span class="tool-badge elementor" style="color: #FF4791;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                                <path d="M8 7h8v2H8zM8 11h8v2H8zM8 15h8v2H8z" fill="currentColor"/>
+                            </svg>
+                            <span>Elementor</span>
+                        </span>
+
                         <span class="tool-badge"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>WooCommerce</span></span>
                     </div>
                 </div>
@@ -595,8 +626,8 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
-                
                 <!-- Education Column -->
                 <div>
                     <h3 class="sub-section-title">
@@ -637,6 +668,47 @@
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="reveal" id="portfolio-preview">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Selected Work</span>
+                <h2 class="section-title">Visual Design <span>Preview</span></h2>
+            </div>
+
+            <div class="preview-grid">
+                <a class="preview-item" href="portfolio.html#logos" aria-label="View logo design work">
+                    <img src="Logo/1.png" alt="Logo design preview">
+                    <div class="preview-item-content">
+                        <h3 class="preview-item-title">Logo Design</h3>
+                        <p class="preview-item-text">Brand marks, identity systems, and clean iconography for clients and campaigns.</p>
+                        <span class="preview-item-link">Explore logos →</span>
+                    </div>
+                </a>
+                <a class="preview-item" href="portfolio.html#business-cards" aria-label="View business card designs">
+                    <img src="Business Card/1.png" alt="Business card design preview">
+                    <div class="preview-item-content">
+                        <h3 class="preview-item-title">Business Cards</h3>
+                        <p class="preview-item-text">Professional layout and typography for print-ready identity collateral.</p>
+                        <span class="preview-item-link">View cards →</span>
+                    </div>
+                </a>
+                <a class="preview-item" href="portfolio.html#posters" aria-label="View poster design work">
+                    <img src="poster/1 (1).png" alt="Poster design preview">
+                    <div class="preview-item-content">
+                        <h3 class="preview-item-title">Poster Concepts</h3>
+                        <p class="preview-item-text">Visual storytelling and campaign graphics built for impact and clarity.</p>
+                        <span class="preview-item-link">See posters →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="section-action">
+                <a href="portfolio.html" class="btn btn-secondary">View Full Portfolio</a>
             </div>
         </div>
     </section>
@@ -841,7 +913,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <!-- Form -->
@@ -879,6 +951,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <!-- Lightbox Modal for Gallery -->
     <div id="lightbox" class="lightbox" aria-hidden="true">
         <div class="lightbox-inner">
@@ -901,6 +975,6 @@
     </footer>
 
     <!-- JS Scripts -->
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
